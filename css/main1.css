@@ -1,0 +1,153 @@
+.page{
+    background-color: black;
+}
+.page .inner{
+    overflow: hidden;
+}
+#page0 .text{
+    position: relative;
+    font-size: 36px;
+    margin:5% auto;
+    width: 100%;
+    color:#ffffff;
+    opacity: 0.8;
+    text-align: center;
+}
+#page0 .haibao{
+    position: relative;
+    width: 100%;
+    padding: 0 3%;
+}
+
+#page0 .little_img{
+    float: left;
+    width: 42%;
+    height: 375px;
+    border: 3px solid #ff0;
+    /* padding: 1% 1%; */
+    margin: 2%;
+}
+
+#page0 .little_img>img{
+    width: 100%;
+    height: 100%;
+}
+#page1 .text{
+    position: absolute;
+    top:5%;
+    width: 100%;
+    font-size: 30px;
+    color:#fff;
+    text-align: center;
+}
+#page1 .text>span{
+    font-size: 36px;
+    color: red;
+}
+#page1 .box{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 750px;
+    margin: 0 auto;
+    display: none;
+    overflow: hidden;
+}
+#page1 .ori_img{
+    z-index: 11;
+    display: none;
+}
+
+
+#page1 .ori_img>img{
+   width: 100%;
+}
+
+#page1 .box ul{
+    overflow: hidden;
+}
+#page1 .box ul>li{
+    float: left;
+    width: 200px;
+    height: 250px;
+}
+
+#page1 .show{
+    border:1px solid #ffffff;
+    -webkit-border-radius:50% 50%;
+    -moz-border-radius:50% 50%;
+    border-radius:50% 50%;
+    width: 50px;
+    height:50px;
+    color : #ffffff;
+    font-size: 44px;
+    text-align: center;
+    bottom: 5%;
+    left: 0;
+    position: absolute;
+}
+
+#drag{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    display: none;
+    z-index: 99;
+    border:1px solid #fff;
+}
+
+#dialog1{
+    display: none;
+}
+#dialog1 .ready{
+    transform: scale(1);
+    animation: small_scale 1s linear 1;
+    -webkit-animation: small_scale 1s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#dialog1 .go{
+    transform: scale(0);
+    opacity: 1;
+    animation: big_scale 1s linear  1s 1;
+    -webkit-animation: big_scale 1s linear 1s 1 ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#dialog1 .text,#dialog2 .text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 116px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    top:40%;
+}
+
+@-webkit-keyframes big_scale{
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+@keyframes big_scale {
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes small_scale{
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes small_scale {
+    100%{
+        transform: scale(0);
+    }
+}

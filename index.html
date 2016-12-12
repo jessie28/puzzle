@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>拼图测试</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<script>
+		if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+			var version = parseFloat(RegExp.$1);
+			if (version > 2.3) {
+				var phoneScale = parseInt(window.screen.width) / 640;
+				document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+			} else {
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+    <link rel="stylesheet" type="text/css" href="./css/core.css">
+    <link rel="stylesheet" type="text/css" href="./css/main1.css?s=1">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+<!--music start-->
+<!--music end-->
+	<div id="container">
+		<div id="tips"></div>
+		<!--change_page begin-->
+		<section class="page" id="page0">
+			<div class="inner">
+				<div class="text">请选择一副海报</div>
+				<div class="haibao clearfix">
+					<div class="little_img thumb1" data-img="1"><img src="./image/thumb1.jpg" alt=""></div>
+					<div class="little_img thumb2" data-img="2"><img src="./image/thumb2.jpg" alt=""></div>
+					<div class="little_img thumb3" data-img="0"><img src="./image/default.jpg" alt=""></div>
+					<div class="little_img thumb4" data-img="0"><img src="./image/default.jpg" alt=""></div>
+				</div>
+				<div class="text">这只是规则</div>
+			</div>
+		</section>
+		<!--change_page end-->
+		<section class="page" id="page1">
+			<div class="text">20s内移动碎片，拼出图片  已用时：<span id="time">15</span>s</div>
+			<div class="ori_img box"></div>
+			<div class="box puzzle">
+				<ul></ul>
+				<div id="drag"></div>
+			</div>
+			<div class="show show_img">?</div>
+		</section>
+
+		<div class="dialog" id="dialog1">
+			<div class="bg">
+				<div class="text ready">READY!</div>
+				<div class="go text" >GO</div>
+			</div>
+		</div>
+
+		<div class="dialog" id="dialog2">
+			<div class="bg">
+				<div class="text again">AGAIN</div>
+			</div>
+		</div>
+	</div>
+</body> 
+</html>
